@@ -1,4 +1,3 @@
-# AI-vs.-Human-Image-Classifier
 # AI vs. Human Image Classifier using Diffusion Model Features
 
 A binary image classifier that detects whether an image was AI-generated or 
