@@ -64,3 +64,28 @@ compression-oriented latent space — DDIM was the best overall performer
 - **pandas**, **numpy**
 - **matplotlib** (visualizations)
 
+## Dataset
+
+This project uses the [Detect AI vs. Human Generated Images](https://www.kaggle.com/competitions/detect-ai-vs-human-generated-images/data) 
+dataset from Kaggle. The dataset itself is **not included** in this 
+repository due to size and Kaggle's terms of use — you'll need to download 
+it separately.
+
+**To reproduce this project:**
+
+1. Download the dataset from the [Kaggle competition page](https://www.kaggle.com/competitions/detect-ai-vs-human-generated-images/data) 
+   (requires a free Kaggle account and accepting the competition rules).
+2. Place the downloaded files into a `dataset/` folder in the project root, 
+   structured as:
+   dataset/
+      ├── train.csv
+      └── [image files]
+3. Ensure `train.csv` contains at minimum:
+   - `file_name` — the image filename
+   - `label` — binary label (1 = AI-generated, 0 = Human-generated)
+4. Update the `DATA_PATH` variable in the notebook if your folder name/path differs.
+
+> **Note:** This project uses only a 1,000-sample subset of the full 
+> training set (via `torch.utils.data.Subset`) for faster experimentation. 
+> Adjust the `range(1000)` slice in the notebook if you want to train on 
+> more data.
