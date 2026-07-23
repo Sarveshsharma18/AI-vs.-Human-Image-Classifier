@@ -65,4 +65,3 @@ compression-oriented latent space — DDIM was the best overall performer
 - **pandas**, **numpy**
 - **matplotlib** (visualizations)
 
-## Project Structure
